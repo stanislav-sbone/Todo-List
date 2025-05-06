@@ -1,0 +1,36 @@
+.todo_list__task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 1rem;
+    color: rgb(82, 82, 82);
+    max-width: 600px;
+  }
+  
+  .todo_list__task_text {
+    word-break: break-all;
+    text-align: left;
+    cursor: default;
+  }
+  
+  .todo_list__task_buttons {
+    display: flex;
+    gap: 0.1rem;
+  }
+  
+  .task_done {
+    background-color: rgb(156, 245, 129);
+    text-decoration: line-through;
+  }
+  
+  .todo_list__task_edit {
+    border: none;
+    outline: none;
+    background: none;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import TodoForm from "./assets/components/TodoForm";
 import Task from "./assets/components/Task";
 import EditTodoForm from "./assets/components/EditTodoForm";
@@ -6,6 +6,13 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const ref = useRef();
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  }, []);
 
   const addTask = () => {
     let inputValue = document.querySelector("#todo-list__input");
@@ -55,7 +62,7 @@ function App() {
     <>
       <div className="todo-list">
         <h1 className="todo-list__title">React ToDo-list &#9989;</h1>
-        <TodoForm addTask={addTask} />
+        <TodoForm addTask={addTask} ref={ref} />
         <hr className="todo-hr" />
         <ul className="todo-list__list">
           {todos.map((todo) =>

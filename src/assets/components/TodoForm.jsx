@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./TodoForm.module.css";
 
-function TodoForm(props) {
-  const { addTask } = props;
+function TodoForm({ addTask, ref }) {
   return (
     <form
       className={styles.todo_list__form}
@@ -12,6 +11,7 @@ function TodoForm(props) {
     >
       <input
         className={styles.todo_list__input}
+        ref={ref}
         id="todo-list__input"
         type="text"
         placeholder="Введите задачу"

@@ -5,6 +5,7 @@ import styles from "./Task.module.css";
 
 function TodoItem(props) {
   const { id, text, isCompleted, removeTask, completeTask, editTodo } = props;
+
   return (
     <li
       className={

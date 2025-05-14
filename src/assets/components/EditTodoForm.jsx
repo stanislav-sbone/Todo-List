@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./EditTodoForm.module.css";
 
-function EditTodoForm(props) {
-  const { todo, editText } = props;
+function EditTodoForm({ todo, editText }) {
   const [value, setValue] = useState(todo.text);
 
   return (
